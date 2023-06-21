@@ -90,6 +90,12 @@ def calculate_tree(node):
     left_height = calculate_tree(node.left)
     right_height = calculate_tree(node.right)
 
+    print(left_height)
+    print(right_height)
+    # print the type of left_height and right_height
+    print(type(left_height))
+    print(type(right_height))
+
     if isinstance(left_height, dict) and isinstance(right_height, dict):
         height = max(left_height['height'], right_height['height']) + 1
         depth = height - 1
